@@ -34,6 +34,7 @@
 * `cmake --build .` to build dependencies (Z3 and LLVM)
 * `cmake --build . --target extra` to download extra packages
 * `cd ../llvm-seahorn/ && git reset --hard 39aa187 && cd ../llvm-dsa/ && git reset --hard fedb3e3 && cd ../sea-dsa/ && git reset --hard 246f0f5 && cd ../crab-llvm/ && git reset --hard e2fac87 && cd ../build/ && make ..` to configure extra packages
+* `After this step, go to ../crab-llvm/CMakeLists.txt and change line 128 by removing -b <> and change line 120 from caballa to seahorn
 * `cmake --build . --target crab && cmake ..` to configure crab-llvm
 * `cmake --build . --target install` to build LinearArbitrary-SeaHorn and install everything in `run` directory
 
