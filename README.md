@@ -28,6 +28,7 @@
 
 # LinearArbitrary-SeaHorn Installation #
 
+* `export PATH="/usr/local/opt/llvm@7/bin:$PATH" `
 * `cd seahorn ; mkdir build ; cd build`
 * `cmake -DCMAKE_INSTALL_PREFIX=run -DCMAKE_C_COMPILER=/usr/local/opt/llvm@7/bin/clang -DCMAKE_CXX_COMPILER=/usr/local/opt/llvm@7/bin/clang++ ../`
 
