@@ -24,12 +24,13 @@
 * Boost 1.63 (brew installation available on Mac os x)
 * libncurses (brew installation available on Mac os x)
 * libgmp (brew installation available on Mac os x)
-
+* brew install llvm@7 (for clang)
 
 # LinearArbitrary-SeaHorn Installation #
 
 * `cd seahorn ; mkdir build ; cd build`
-* `cmake -DCMAKE_INSTALL_PREFIX=run ../ `
+* `cmake -DCMAKE_INSTALL_PREFIX=run -DCMAKE_C_COMPILER=/usr/local/opt/llvm@7/bin/clang -DCMAKE_CXX_COMPILER=/usr/local/opt/llvm@7/bin/clang++ ../`
+
 * `cmake --build .` to build dependencies (Z3 and LLVM)
 * `cmake --build . --target extra` to download extra packages
 * `cd ../llvm-seahorn/ && git reset --hard 39aa187 && cd ../llvm-dsa/ && git reset --hard fedb3e3 && cd ../sea-dsa/ && git reset --hard 246f0f5 && cd ../crab-llvm/ && git reset --hard e2fac87 && cd ../build/ && make ..` to configure extra packages
